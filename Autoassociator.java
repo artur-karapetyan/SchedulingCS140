@@ -1,43 +1,70 @@
+import java.util.Random;
+
 public class Autoassociator {
 	private int weights[][];
 	private int trainingCapacity;
-	
+
 	public Autoassociator(CourseArray courses) {
-		// TO DO
-		// creates a new Hopfield network with the same number of neurons 
-		// as the number of courses in the input CourseArray
+		int numNeurons = courses.length();
+		weights = new int[numNeurons][numNeurons];
+		trainingCapacity = numNeurons;
+
+		for (int i = 0; i < numNeurons; i++) {
+			for (int j = 0; j < numNeurons; j++) {
+				if (i != j) {
+					weights[i][j] = 0;
+				} else {
+					weights[i][j] = 1;
+				}
+			}
+		}
 	}
-	
+
 	public int getTrainingCapacity() {
-		// TO DO
-		
-		return 0;
+		return trainingCapacity;
 	}
-	
+
 	public void training(int pattern[]) {
-		// TO DO
+		for (int i = 0; i < pattern.length; i++) {
+			for (int j = 0; j < pattern.length; j++) {
+				if (i != j) {
+					weights[i][j] += pattern[i] * pattern[j];
+				}
+			}
+		}
 	}
-	
+
 	public int unitUpdate(int neurons[]) {
-		// TO DO
-		// implements a single update step and
-		// returns the index of the randomly selected and updated neuron
-		
-		return 0;
+		Random random = new Random();
+		int index = random.nextInt(neurons.length);
+		int sum = 0;
+		for (int i = 0; i < neurons.length; i++) {
+			sum += weights[index][i] * neurons[i];
+		}
+		neurons[index] = sum >= 0 ? 1 : -1;
+		return index;
 	}
-	
+
 	public void unitUpdate(int neurons[], int index) {
-		// TO DO
-		// implements the update step of a single neuron specified by index
+		int sum = 0;
+		for (int i = 0; i < neurons.length; i++) {
+			sum += weights[index][i] * neurons[i];
+		}
+		neurons[index] = sum >= 0 ? 1 : -1;
 	}
-	
+
 	public void chainUpdate(int neurons[], int steps) {
-		// TO DO
-		// implements the specified number od update steps
+		for (int i = 0; i < steps; i++) {
+			unitUpdate(neurons);
+		}
 	}
-	
+
 	public void fullUpdate(int neurons[]) {
-		// TO DO
-		// updates the input until the final state achieved
+		boolean stable = false;
+		while (!stable) {
+			int[] copy = neurons.clone();
+			chainUpdate(neurons, 1);
+			stable = java.util.Arrays.equals(neurons, copy);
+		}
 	}
 }
