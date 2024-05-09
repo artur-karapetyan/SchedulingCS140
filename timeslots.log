@@ -1,0 +1,24 @@
+Logs for Task 3
+
+Shift = 5	Min clashes = 240	at step 4   
+Shift = 10	Min clashes = 98	at step 3   
+Shift = 20	Min clashes = 76	at step 8   
+Shift = 20	Min clashes = 76	at step 8   
+Shift = 24	Min clashes = 82	at step 4   
+Shift = 21	Min clashes = 64	at step 6    
+Shift = 10	Min clashes = 98	at step 3    
+Shift = 20	Min clashes = 76	at step 8   
+Shift = 31	Min clashes = 78	at step 30   
+Shift = 31	Min clashes = 78	at step 30   
+Shift = 34	Min clashes = 94	at step 1   
+Shift = 34	Min clashes = 94	at step 1   
+Shift = 36	Min clashes = 136	at step 3    
+Shift = 71	Min clashes = 64	at step 48   
+Shift = 60	Min clashes = 58	at step 27   
+Shift = 6	Min clashes = 114	at step 49   
+Shift = 600	Min clashes = 72	at step 70   
+Shift = 600	Min clashes = 112	at step 2   
+Shift = 600	Min clashes = 54	at step 109
+Slots: 17, Shift: 6, Iteration Index: 4, Timeslot Index: 1
+Slots: 17, Shift: 6, Iteration Index: 4, Timeslot Index: 1
+Slots: 17, Shift: 20, Iteration Index: 8, Timeslot Index: 1

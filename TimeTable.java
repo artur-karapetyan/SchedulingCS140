@@ -1,9 +1,12 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.*;
 
 public class TimeTable extends JFrame implements ActionListener {
 
+    private Autoassociator autoassociator;
     private JPanel screen = new JPanel(), tools = new JPanel();
     private JButton tool[];
     private JTextField field[];
@@ -22,6 +25,24 @@ public class TimeTable extends JFrame implements ActionListener {
         add(tools);
 
         setVisible(true);
+        courses = new CourseArray(0, 0);
+        autoassociator = new Autoassociator(courses);
+    }
+
+    private void trainAutoassociatorWithClashFreeSlots() {
+        int[] clashFreeTimeslots = { /* Extracted clash-free timeslots */ };
+
+        autoassociator.training(clashFreeTimeslots);
+    }
+
+    private void saveUsedTimeslotsToLogFile(int numSlots, int shift, int iterationIndex, int timeslotIndex) {
+        try {
+            FileWriter writer = new FileWriter("timeslots.log", true);
+            writer.write("Slots: " + numSlots + ", Shift: " + shift + ", Iteration Index: " + iterationIndex + ", Timeslot Index: " + timeslotIndex + "\n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setTools() {
@@ -77,6 +98,9 @@ public class TimeTable extends JFrame implements ActionListener {
                 courses = new CourseArray(Integer.parseInt(field[1].getText()) + 1, slots);
                 courses.readClashes(field[2].getText());
                 draw();
+
+                trainAutoassociatorWithClashFreeSlots();
+
                 break;
             case 1:
                 min = Integer.MAX_VALUE;
@@ -94,6 +118,9 @@ public class TimeTable extends JFrame implements ActionListener {
                 }
                 System.out.println("Shift = " + field[4].getText() + "\tMin clashes = " + min + "\tat step " + step);
                 setVisible(true);
+
+                saveUsedTimeslotsToLogFile(Integer.parseInt(field[0].getText()), Integer.parseInt(field[4].getText()), step, 1);
+
                 break;
             case 2, 5:
                 courses.iterate(Integer.parseInt(field[4].getText()));
