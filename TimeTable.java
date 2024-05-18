@@ -35,10 +35,10 @@ public class TimeTable extends JFrame implements ActionListener {
         autoassociator.training(clashFreeTimeslots);
     }
 
-    private void saveUsedTimeslotsToLogFile(int numSlots, int shift, int iterationIndex, int timeslotIndex) {
+    private void saveUsedTimeslotsToLogFile(int numSlots, int shift, int iterationIndex, int step) {
         try {
             FileWriter writer = new FileWriter("timeslots.log", true);
-            writer.write("Slots: " + numSlots + ", Shift: " + shift + ", Iteration Index: " + iterationIndex + ", Timeslot Index: " + timeslotIndex + "\n");
+            writer.write("Slots: " + numSlots + ", Shift: " + shift + ", Min clashes " + iterationIndex + "\tat step " + step + "\n");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -67,8 +67,8 @@ public class TimeTable extends JFrame implements ActionListener {
         }
 
         field[0].setText("17");
-        field[1].setText("381");
-        field[2].setText("lse-f-91.stu");
+        field[1].setText("261");
+        field[2].setText("tre-s-92.stu");
         field[3].setText("1");
     }
 
@@ -119,7 +119,7 @@ public class TimeTable extends JFrame implements ActionListener {
                 System.out.println("Shift = " + field[4].getText() + "\tMin clashes = " + min + "\tat step " + step);
                 setVisible(true);
 
-                saveUsedTimeslotsToLogFile(Integer.parseInt(field[0].getText()), Integer.parseInt(field[4].getText()), step, 1);
+                saveUsedTimeslotsToLogFile(Integer.parseInt(field[0].getText()), Integer.parseInt(field[4].getText()), min, step);
 
                 break;
             case 2, 5:

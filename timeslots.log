@@ -1,5 +1,6 @@
 Logs for Task 3
 
+File lse-f-91.stu
 Shift = 5	Min clashes = 240	at step 4   
 Shift = 10	Min clashes = 98	at step 3   
 Shift = 20	Min clashes = 76	at step 8   
@@ -22,3 +23,63 @@ Shift = 600	Min clashes = 54	at step 109
 Slots: 17, Shift: 6, Iteration Index: 4, Timeslot Index: 1
 Slots: 17, Shift: 6, Iteration Index: 4, Timeslot Index: 1
 Slots: 17, Shift: 20, Iteration Index: 8, Timeslot Index: 1
+Slots: 18, Shift: 6, Iteration Index: 14, Timeslot Index: 1
+Slots: 18, Shift: 6, Iteration Index: 14, Timeslot Index: 1
+Slots: 18, Shift: 6, Iteration Index: 14, Timeslot Index: 1
+Slots: 18, Shift: 6, Iteration Index: 14, Timeslot Index: 1
+Slots: 30, Shift: 6, Iteration Index: 9, Timeslot Index: 1
+Slots: 20, Shift: 6, Iteration Index: 59, Timeslot Index: 1
+Slots: 20, Shift: 10, Iteration Index: 9, Timeslot Index: 1
+Slots: 23, Shift: 10, Iteration Index: 50, Timeslot Index: 1
+Slots: 26, Shift: 10, Iteration Index: 43, Timeslot Index: 1
+Slots: 28, Shift: 10, Iteration Index: 16, Timeslot Index: 1
+Slots: 27, Shift: 10, Iteration Index: 94, Timeslot Index: 1
+Slots: 28, Shift: 10, Iteration Index: 16, Timeslot Index: 1
+Slots: 28, Shift: 10, Iteration Index: 16, Timeslot Index: 1
+
+File tre-s-92.stu, courses 261
+Slots: 20, Shift: 21, Min clashes 124	at step 197
+Slots: 28, Shift: 21, Min clashes 0	at step 3
+Slots: 28, Shift: 21, Min clashes 0	at step 3
+Slots: 26, Shift: 21, Min clashes 0	at step 55
+Slots: 23, Shift: 21, Min clashes 24	at step 95
+Slots: 16, Shift: 21, Min clashes 322	at step 109
+Slots: 24, Shift: 21, Min clashes 32	at step 19
+Slots: 25, Shift: 21, Min clashes 0	at step 80
+Slots: 25, Shift: 13, Min clashes 10	at step 190
+Slots: 25, Shift: 25, Min clashes 34	at step 1
+Slots: 25, Shift: 20, Min clashes 16	at step 25
+Slots: 25, Shift: 14, Min clashes 28	at step 141
+Slots: 25, Shift: 16, Min clashes 18	at step 78
+Slots: 25, Shift: 18, Min clashes 4	at step 159
+Slots: 25, Shift: 21, Min clashes 0	at step 80
+Slots: 24, Shift: 25, Min clashes 6	at step 84
+Slots: 24, Shift: 30, Min clashes 38	at step 12
+Slots: 24, Shift: 30, Min clashes 38	at step 12
+Slots: 24, Shift: 34, Min clashes 12	at step 53
+Slots: 24, Shift: 18, Min clashes 38	at step 12
+Slots: 24, Shift: 21, Min clashes 32	at step 19
+Slots: 25, Shift: 21, Min clashes 0	at step 80
+Slots: 25, Shift: 21, Min clashes 12	at step 10
+Slots: 25, Shift: 21, Min clashes 12	at step 10
+Slots: 25, Shift: 21, Min clashes 34	at step 4
+Slots: 25, Shift: 21, Min clashes 0	at step 80
+Slots: 18, Shift: 21, Min clashes 202	at step 28
+Slots: 18, Shift: 10, Min clashes 214	at step 87
+Slots: 18, Shift: 25, Min clashes 188	at step 162
+Slots: 17, Shift: 25, Min clashes 244	at step 196
+Slots: 17, Shift: 4, Min clashes 428	at step 48
+Slots: 17, Shift: 50, Min clashes 228	at step 185
+Slots: 23, Shift: 50, Min clashes 26	at step 214
+Slots: 24, Shift: 50, Min clashes 18	at step 34
+Slots: 25, Shift: 50, Min clashes 34	at step 1
+Slots: 26, Shift: 50, Min clashes 0	at step 14
+Slots: 40, Shift: 50, Min clashes 0	at step 1
+Slots: 8, Shift: 500, Min clashes 2536	at step 33
+Slots: 8, Shift: 500, Min clashes 2536	at step 33
+Slots: 10, Shift: 500, Min clashes 2986	at step 1
+Slots: 40, Shift: 500, Min clashes 0	at step 1
+Slots: 40, Shift: 5, Min clashes 0	at step 7
+Slots: 23, Shift: 5, Min clashes 176	at step 24
+Slots: 23, Shift: 500, Min clashes 44	at step 16
+Slots: 23, Shift: 5000, Min clashes 26	at step 181
